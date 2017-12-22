@@ -1,0 +1,23 @@
+{
+  "name": "Liquidations Extension",
+  "description": "Create links to liquidation inventory lists",
+  "version": "2.0",
+  "permissions": [
+    "activeTab", "tabs", "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.liquidation.com/aucimg/*"],
+      //"css": ["mystyles.css"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["eventPage.js"]
+  },
+  "browser_action": {
+    "default_title": "Make this page red",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
