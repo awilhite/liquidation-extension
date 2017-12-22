@@ -2,8 +2,11 @@ console.log(document.querySelectorAll("table"));
 
 var tables = document.querySelectorAll("table");
 
-const RETAIL_INDEX = 2;
-const UPC_INDEX = 4;
+const UPC_STRING = "UPC";
+const RETAIL_STRING = "Retail Price";
+const TOTAL_STRING = "Total Retail Price";
+
+var retail_index, upc_index, total_index;
 
 var thresh;
 
@@ -22,7 +25,13 @@ function parseTable()
 		
 		var tds = trs[0].querySelectorAll("td");
 		
-		
+		tds.forEach(function(td)
+		{
+			if (td.includes(RETAIL_STRING))
+			{
+				
+			}
+		});
 		
 		trs.forEach(function(tr) {
 			var tds = tr.querySelectorAll("td");
